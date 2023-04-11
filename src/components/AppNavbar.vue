@@ -10,7 +10,7 @@ export default {
               {
                 name: 'Home',
                 content: [
-                  'Torna indietro', 'vai avanti'
+                  'Prova 1', 'Prova 2'
                 ]
               },
               {
@@ -22,25 +22,25 @@ export default {
               {
                 name: 'Courses',
                 content: [
-                  'Torna indietro', 'vai avanti'
+                  'Prova 3', 'Prova 4'
                 ]
               },
               {
                 name: 'Features',
                 content: [
-                  'Torna indietro', 'vai avanti'
+                  'Prova 5', 'Prova 6'
                 ]
               },
               {
                 name: 'Blog',
                 content: [
-                  'Torna indietro', 'vai avanti'
+                  'Prova 7', 'Prova 8'
                 ]
               },
               {
                 name: 'Shop',
                 content: [
-                  'Torna indietro', 'vai avanti'
+                  'Prova 9', 'Prova 10'
                 ]
               },
             ]
@@ -68,10 +68,15 @@ export default {
       </nav>
     </div>
     <div class="logo">
-
+      <img src="/img/dark-logo.png" alt="logo max coach">
     </div>
     <div class="rightLinks">
-
+      <i class="fa-sharp fa-solid fa-cart-shopping"><div class="itemCart">0</div></i>
+      <i class="fa-regular fa-user"></i>
+      <div class="input-box">
+        <input type="text" class="form-control" placeholder="Search...">
+        <i class="fa fa-search"></i>                    
+      </div>
     </div>
   </div>
   
@@ -80,26 +85,31 @@ export default {
 <style scoped lang="scss">
 .container-fluid{
   max-width: 1500px;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
   .leftLinks {
     .navbar {
       .linkContainer{
         display: flex;
         gap: 30px;
         list-style-type: none;
-        .nav-item{
-          .active{
-            background-color: red;
-          }
+        .nav-item:hover:after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: #20ad96;
+          position: absolute;
+        }
+        .nav-item:hover{
+          color: #20ad96;
         }
         .nav-item:hover .dropdown-menu{
           display: block;
           .dropdownInfo {
             --bs-dropdown-link-active-bg: #20ad96;
           }
-        }
-        .nav-item:hover {
-          color: #20ad96;
-          border-bottom: 1px solid #20ad96;
         }
         .nav-link {
           display: flex;
@@ -111,7 +121,8 @@ export default {
         }
         .dropdown-menu {
           padding: 0;
-          margin-top: 20px;
+          padding-top: 20px;
+          margin-top: 1px;
           border: 0;
           border-bottom: 2px solid #20ad96;
           border-radius: 0;
@@ -120,5 +131,61 @@ export default {
       }
     }
   }
+  .logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img{
+      height: 40%;
+    }
+  }
+
+  .rightLinks{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .fa-user{
+      border: 1px solid black;
+      border-radius: 25px;
+      padding: 3px;
+      font-size: 0.5em;
+    }
+    .fa-cart-shopping{
+      position: relative;
+      .itemCart{
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        font-size: 0.5em;
+        padding: 3px 4px;
+        border-radius: 25px;
+        background-color: #20ad96;
+        color: white;
+        text-align: center;
+      }
+    }
+    .input-box{
+    position: relative;
+
+      i {
+      position: absolute;
+      right: 13px;
+      top:12px;
+      color: #20ad96;
+      }
+    }
+
+    input{
+      background-color: #f5f5f5;
+    }
+
+    input:focus{
+      border-color: #20ad96;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #20ad96;
+      outline: 0 none;
+    }
+
+  }
+
 }
 </style>

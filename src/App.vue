@@ -1,5 +1,6 @@
 <script>
 
+import AppBotInfo from "./components/AppBotInfo.vue";
 import AppJumbo from "./components/AppJumbo.vue";
 import AppNavbar from "./components/AppNavbar.vue";
 import AppTopInfo from "./components/AppTopInfo.vue";
@@ -17,7 +18,8 @@ export default {
   components: {
     AppNavbar,
     AppJumbo,
-    AppTopInfo
+    AppTopInfo,
+    AppBotInfo
 },
 
   methods: {
@@ -30,6 +32,7 @@ export default {
   <AppNavbar></AppNavbar>
   <AppJumbo></AppJumbo>
   <AppTopInfo></AppTopInfo>
+  <AppBotInfo></AppBotInfo>
 </template>
 
 <style scoped lang="scss">

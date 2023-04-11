@@ -2,7 +2,7 @@
 import {store} from "../store.js";
 
 export default {
-  name: "AppJumbo",
+  name: "AppTopInfo",
     data() {
         return {
             store,
@@ -56,19 +56,21 @@ export default {
   .main-container{
     padding-top: 100px;
     max-width: 1200px;
-      margin: auto;
+    margin: auto;
     .top-section{
       display: flex;
       
       .left-section{
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
         gap: 10px;
         color: #696969;
 
         h2{
           color: black;
+          font-size: 2.5em;
         }
         .thin-font{
           font-weight: 400;

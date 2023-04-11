@@ -1,5 +1,6 @@
 <script>
 
+import AppJumbo from "./components/AppJumbo.vue";
 import AppNavbar from "./components/AppNavbar.vue";
 import {store} from "./store.js";
 
@@ -13,7 +14,8 @@ export default {
   },
 
   components: {
-    AppNavbar
+    AppNavbar,
+    AppJumbo
 },
 
   methods: {
@@ -24,6 +26,7 @@ export default {
 
 <template>
   <AppNavbar></AppNavbar>
+  <AppJumbo></AppJumbo>
 </template>
 
 <style scoped lang="scss">

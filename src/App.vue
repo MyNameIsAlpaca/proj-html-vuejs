@@ -1,5 +1,6 @@
 <script>
 
+import AppBlog from "./components/AppBlog.vue";
 import AppBotInfo from "./components/AppBotInfo.vue";
 import AppJumbo from "./components/AppJumbo.vue";
 import AppLatest from "./components/AppLatest.vue";
@@ -25,7 +26,8 @@ export default {
     AppBotInfo,
     AppLatest,
     AppTestimonialsTop,
-    AppTestimonialsBot
+    AppTestimonialsBot,
+    AppBlog
 },
 
   methods: {
@@ -42,6 +44,7 @@ export default {
   <AppLatest></AppLatest>
   <AppTestimonialsTop></AppTestimonialsTop>
   <AppTestimonialsBot></AppTestimonialsBot>
+  <AppBlog></AppBlog>
 </template>
 
 <style lang="scss">

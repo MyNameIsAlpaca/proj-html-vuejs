@@ -32,7 +32,18 @@ export default {
     </div>
     <div class="right-section">
       <div class="card-container">
-        <div class="card card-top" :class="activeCard == 1 ? 'active' : ''">
+        <div class="card card-top" :class="activeCard == 1 ? 'active' : ''" @click="this.activeCard = 1">
+          <h5 class="card-title">The MaxCoach team works really jard to ensure high level of quality</h5>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis optio sint odio exercitationem laudantium quasi commodi alias natus molestias deserunt soluta nesciunt officiis, iure voluptates libero dolore officia at? Nulla?</p>
+          <div class="user-card">
+            <img src="/img/testimonial-avata-03.jpg" alt="">
+            <div class="user-info">
+              <strong class="user-name">Mad Max</strong>
+              <span class="user-role">/ Pony trainer </span>
+            </div>
+          </div>
+        </div>
+        <div class="card card-mid" :class="activeCard == 0 ? 'active' : ''" @click="this.activeCard = 0">
           <h5 class="card-title">Professional team of specialists and passionate mentors at reach</h5>
           <p class="card-description">I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</p>
           <div class="user-card">
@@ -43,20 +54,9 @@ export default {
             </div>
           </div>
         </div>
-        <div class="card card-mid" :class="activeCard == 0 ? 'active' : ''">
-          <h5 class="card-title">Professional team of specialists and passionate mentors at reach</h5>
-          <p class="card-description">I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</p>
-          <div class="user-card">
-            <img src="/img/testimonial-avata-01.jpg" alt="">
-            <div class="user-info">
-              <strong class="user-name">MADLEY PONDOR</strong>
-              <span class="user-role">/ IT Specialist</span>
-            </div>
-          </div>
-        </div>
-        <div class="card card-bot" :class="activeCard == 2 ? 'active' : ''">
-          <h5 class="card-title">Professional team of specialists and passionate mentors at reach</h5>
-          <p class="card-description">I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</p>
+        <div class="card card-bot" :class="activeCard == 2 ? 'active' : ''" @click="this.activeCard = 2">
+          <h5 class="card-title">The greatest satisfaction a queen can achieve</h5>
+          <p class="card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur obcaecati quis ea iusto hic, voluptatum beatae ipsam doloremque eum, nemo magni sapiente impedit ducimus! Labore et ex aliquid architecto eligendi.</p>
           <div class="user-card">
             <img src="/img/testimonial-avata-02.jpg" alt="">
             <div class="user-info">
@@ -105,25 +105,25 @@ export default {
       
       .card.active{
         z-index: 3;
-        width: 100%;
-        height: 100%;
+        opacity: 1;
+
       }
       .card-top{
         position: absolute;
-        top: -150px;
-        
+        top: -180px;
       }
       .card-mid{
         position: relative;
       }
       .card-bot{
         position: absolute;
-        top: 150px;
+        top: 180px;
       }
       .card{
         padding: 40px;
         border: 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 0.5;
         .card-description{
           color: gray;
           font-weight: 500;

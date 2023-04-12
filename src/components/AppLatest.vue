@@ -23,24 +23,24 @@ export default {
               },
               {
                 image: '/img/stock-full-hd-04-480x298.jpg',
-                price: '40.00',
+                price: '19.00',
                 title: 'Open Programming Courses for Everyone: Python',
                 lessons: 17,
                 students: 62,
               },
               {
-                image: '/img/course-02-480x298.jpg',
-                price: '40.00',
-                title: 'Open Programming Courses for Everyone: Python',
-                lessons: 17,
-                students: 62,
+                image: '/img/redd-f-5U_28ojjgms-unsplash.jpg',
+                price: '0.00',
+                title: 'Group meeting and raise social skill',
+                lessons: 10,
+                students: 32,
               },
               {
-                image: '/img/stock-full-hd-03-480x298.jpg',
-                price: '40.00',
-                title: 'Open Programming Courses for Everyone: Python',
-                lessons: 17,
-                students: 62,
+                image: '/img/campaign-creators-gMsnXqILjp4-unsplash.jpg',
+                price: '20.00',
+                title: 'Open Programming Courses for Everyone: Javascript',
+                lessons: 12,
+                students: 52,
               },
             ],
             activeIndex: 0,
@@ -91,8 +91,10 @@ export default {
         <h2>Latest Online <span class="coloredTitle">Courses</span></h2>
       </div>
       <div class="card-section">
-        <div v-for="(card, index) in cardList" class="card" v-show="showCard(index)" :class="this.activeIndex == index ? 'active' : ''">
-          <img :src="card.image" alt="">
+        <div v-for="(card, index) in cardList" class="card" v-show="showCard(index)" @click="this.activeIndex = index" :class="this.activeIndex == index ? 'active' : ''">
+          <div class="img-container">
+            <img :src="card.image" alt="">
+          </div>
           <div v-if="card.price == '0.00'" class="bookmark"><span style="color:white;position: relative;top: -15px;text-align: center;right: -10px;">Free</span></div>
           <div class="main-info">
             <span class="price">$ {{ card.price }}</span>
@@ -147,6 +149,7 @@ export default {
       gap: 20px;
       justify-content: space-between;
       overflow: hidden;
+      height: 500px;
       .card.active{
         background-color: lightblue;
       }
@@ -156,6 +159,16 @@ export default {
         border-radius: 10px;
         border: 0;
         overflow: hidden;
+        cursor: pointer;
+        .img-container{
+          max-width: 100%;
+          height: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
         
         .bookmark {
             width: 105px;
@@ -203,6 +216,7 @@ export default {
         width: 10px;
         height: 10px;
         border-radius: 50%;
+        cursor: pointer;
       }
       .dot.activeDot {
         background-color: black;

@@ -28,7 +28,7 @@ export default {
 .background{
   background-image: url(/img/home-3-hero-bg.jpg);
   height: 636px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;

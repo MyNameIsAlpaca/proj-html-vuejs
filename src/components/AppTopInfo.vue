@@ -59,7 +59,6 @@ export default {
     margin: auto;
     .top-section{
       display: flex;
-      
       .left-section{
         display: flex;
         flex-direction: column;
@@ -143,6 +142,12 @@ export default {
         };
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .small-img{
+    display: none;
   }
 }
 

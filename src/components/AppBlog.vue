@@ -65,6 +65,7 @@ export default {
 .background{
   background-color: #f8f8f8;
   .main-container{
+    min-height: 690px;
     max-width: 1200px;
     margin: auto;
     margin-top: 150px;

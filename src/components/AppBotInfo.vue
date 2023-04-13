@@ -47,6 +47,7 @@ export default {
     .left-section{
       .img-container{
         position: relative;
+        cursor: pointer;
         .youtubeIcon{
           position: absolute;
           top: 50%;

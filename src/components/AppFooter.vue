@@ -60,6 +60,7 @@ export default {
   </div>
   <div class="copyright">
     <span>&copy; 2020 Maxcoach. All Rights Reserved</span>
+    <div class="back"> <a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>
   </div>
   </div>
 </template>
@@ -131,7 +132,25 @@ export default {
     color: #ababab;
     padding-top: 50px;
     padding-bottom: 50px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    span{
+      display: flex;
+      align-self: center;
+    }
+    .back{
+      display: flex;
+      color: white;
+      align-self: flex-end;
+      margin-right: 10%;
+      
+      a{
+        background-color: #20AD96;
+        border-radius: 50%;
+        padding: 15px 20px;
+        color: white;
+      }
+    }
   }
 }
 

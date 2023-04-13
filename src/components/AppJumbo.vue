@@ -59,6 +59,10 @@ export default {
       align-items: center;
       gap: 20px;
     }
+    button:hover{
+      background-color: #20AD96;
+      color: white;
+    }
   }
 }
 </style>

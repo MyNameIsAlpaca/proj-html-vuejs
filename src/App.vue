@@ -1,5 +1,5 @@
 <script>
-
+import AppElementFixed from "./components/AppElementFixed.vue"
 import AppBlog from "./components/AppBlog.vue";
 import AppBotInfo from "./components/AppBotInfo.vue";
 import AppFooter from "./components/AppFooter.vue";
@@ -31,7 +31,8 @@ export default {
     AppTestimonialsBot,
     AppBlog,
     AppNewsLetter,
-    AppFooter
+    AppFooter,
+    AppElementFixed
 },
 
   methods: {
@@ -42,6 +43,7 @@ export default {
 
 <template>
   <AppNavbar></AppNavbar>
+  <AppElementFixed></AppElementFixed>
   <AppJumbo></AppJumbo>
   <AppTopInfo></AppTopInfo>
   <AppBotInfo></AppBotInfo>

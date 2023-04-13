@@ -10,7 +10,6 @@ export default {
               {
                 name: 'Home',
                 content: [
-                  'Prova 1', 'Prova 2'
                 ]
               },
               {
@@ -22,25 +21,25 @@ export default {
               {
                 name: 'Courses',
                 content: [
-                  'Prova 3', 'Prova 4'
+                  'Cooking class', 'Coding class', 'Running course'
                 ]
               },
               {
                 name: 'Features',
                 content: [
-                  'Prova 5', 'Prova 6'
+                  'Sponsor', 'Free trial'
                 ]
               },
               {
                 name: 'Blog',
                 content: [
-                  'Prova 7', 'Prova 8'
+                  'Cooking blog', 'Coding blog', 'Gaming blog', 'Movie blog'
                 ]
               },
               {
                 name: 'Shop',
                 content: [
-                  'Prova 9', 'Prova 10'
+                  'T-shirt Shop', 'Hat Shop', 'Shoes Shop'
                 ]
               },
             ]
@@ -59,7 +58,7 @@ export default {
       <nav class="navbar">
         <ul class="linkContainer">
           <li v-for="link in navLinks" class="nav-item dropdown">
-            <a class="nav-link" href="#"> {{ link.name }} <i class="fa-solid fa-chevron-down"></i></a>
+            <a class="nav-link" href="#"> {{ link.name }} <i v-show="link.name != 'Home'" class="fa-solid fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li class="dropdownInfo" v-for="sub in link.content"><a class="dropdown-item" href="#"> {{ sub }}</a></li>
             </ul>
@@ -121,7 +120,7 @@ export default {
         }
         .dropdown-menu {
           padding: 0;
-          padding-top: 20px;
+          padding-top: 30px;
           margin-top: 1px;
           border: 0;
           border-bottom: 2px solid #20ad96;

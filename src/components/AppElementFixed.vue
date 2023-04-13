@@ -35,6 +35,7 @@ export default {
   overflow: hidden;
   text-align: center;
   z-index: 5;
+  border: 1px dotted rgba(211, 211, 211, 0.534);
   .fa-solid{
     padding: 10px;
   }

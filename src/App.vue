@@ -5,6 +5,7 @@ import AppBotInfo from "./components/AppBotInfo.vue";
 import AppJumbo from "./components/AppJumbo.vue";
 import AppLatest from "./components/AppLatest.vue";
 import AppNavbar from "./components/AppNavbar.vue";
+import AppNewsLetter from "./components/AppNewsLetter.vue";
 import AppTestimonialsBot from "./components/AppTestimonialsBot.vue";
 import AppTestimonialsTop from "./components/AppTestimonialsTop.vue";
 import AppTopInfo from "./components/AppTopInfo.vue";
@@ -27,7 +28,8 @@ export default {
     AppLatest,
     AppTestimonialsTop,
     AppTestimonialsBot,
-    AppBlog
+    AppBlog,
+    AppNewsLetter
 },
 
   methods: {
@@ -45,6 +47,7 @@ export default {
   <AppTestimonialsTop></AppTestimonialsTop>
   <AppTestimonialsBot></AppTestimonialsBot>
   <AppBlog></AppBlog>
+  <AppNewsLetter></AppNewsLetter>
 </template>
 
 <style lang="scss">

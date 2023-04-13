@@ -73,7 +73,7 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
     span{
       color: gray;
     }
@@ -88,6 +88,9 @@ export default {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      .card:hover{
+        padding: 5px;
+      }
       .card{
         max-width: calc(100% / 3 - 20px);
         border: 0;
@@ -95,6 +98,7 @@ export default {
         flex-direction: column;
         gap: 10px;
         background-color: #f8f8f8;
+        cursor: pointer;
         .info{
           display: flex;
           gap: 30px;

@@ -153,6 +153,9 @@ export default {
       .card.active{
         background-color: lightblue;
       }
+      .card:hover{
+        padding: 5px;
+      }
       .card{
         min-width: calc(100% / 3 - 19px);
         max-width: calc(100% / 3 - 19px);
